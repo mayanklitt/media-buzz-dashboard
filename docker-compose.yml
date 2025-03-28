@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - TMDB_API_KEY=06f21ae1b028948f0cf37fc84d55b69d
+      - NEWS_API_KEY=ba003005a576427684ef985ab8d67521
+    networks:
+      - media-buzz-network
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:5000
+    networks:
+      - media-buzz-network
+
+networks:
+  media-buzz-network:
+    driver: bridge
