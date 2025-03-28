@@ -1,7 +1,7 @@
 # 🎬 MediaBuzz Movie Dashboard 📰
 
-![Dashboard Screenshot](./screenshot.png)  
-*(Replace with your actual screenshot path)*
+## Dashboard Screenshot
+![alt text](image.png)
 
 A modern full-stack dashboard that correlates movie popularity with media coverage. Built with React, Node.js, and Docker.  
 
